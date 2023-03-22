@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="exm_pading_edit">10dp</dimen>
+    <dimen name="exm_20dp">20dp</dimen>
+</resources>

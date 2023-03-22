@@ -7,14 +7,29 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:layout_width="wrap_content"
+        android:id="@+id/edtUserName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       android:hint="Nombre de usuario"
-       android:layout_marginTop="150dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
+        android:layout_marginStart="@dimen/exm_20dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="@dimen/exm_20dp"
+        android:hint="@string/user_name"
+        android:paddingStart="@dimen/exm_pading_edit"
+        android:paddingEnd="@dimen/exm_pading_edit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/exm_20dp"
+        android:layout_marginTop="@dimen/exm_20dp"
+        android:layout_marginEnd="@dimen/exm_20dp"
+        android:text="@string/take_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUserName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
