@@ -14,11 +14,11 @@
         android:theme="@style/Theme.ExamenAndroidIzder"
         tools:targetApi="31">
         <activity
-            android:name=".FotoActivity"
+            android:name=".ui.modulePhoto.FotoActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.moduleUser.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

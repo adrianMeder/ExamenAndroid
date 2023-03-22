@@ -1,4 +1,4 @@
-package com.example.examenandroidizder
+package com.example.examenandroidizder.ui.modulePhoto
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

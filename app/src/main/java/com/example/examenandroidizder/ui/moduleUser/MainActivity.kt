@@ -1,4 +1,4 @@
-package com.example.examenandroidizder
+package com.example.examenandroidizder.ui.moduleUser
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.text.InputFilter
 import android.widget.EditText
 import android.widget.Toast
+import com.example.examenandroidizder.ui.modulePhoto.FotoActivity
+import com.example.examenandroidizder.R
 import com.example.examenandroidizder.databinding.ActivityMainBinding
 
 open class MainActivity : AppCompatActivity() {
