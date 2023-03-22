@@ -6,30 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/txtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/exm_10dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="@dimen/exm_20dp"
+        android:paddingStart="@dimen/exm_pading_edit"
+        android:paddingEnd="@dimen/exm_pading_edit"
+        android:text="@string/user_name_txt"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/edtUserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/exm_20dp"
-        android:layout_marginTop="150dp"
         android:layout_marginEnd="@dimen/exm_20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_border"
         android:hint="@string/user_name"
+        android:padding="@dimen/exm_10dp"
         android:paddingStart="@dimen/exm_pading_edit"
         android:paddingEnd="@dimen/exm_pading_edit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUserName" />
 
     <Button
-        android:id="@+id/btnPhoto"
+        android:id="@+id/btnNextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/exm_20dp"
         android:layout_marginTop="@dimen/exm_20dp"
         android:layout_marginEnd="@dimen/exm_20dp"
-        android:text="@string/take_photo"
+        android:layout_marginBottom="@dimen/exm_20dp"
+        android:text="@string/next_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUserName" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

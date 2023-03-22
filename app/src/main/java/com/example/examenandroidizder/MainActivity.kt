@@ -1,11 +1,14 @@
 package com.example.examenandroidizder
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputFilter
+import android.widget.EditText
+import android.widget.Toast
 import com.example.examenandroidizder.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+open class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,13 +18,30 @@ class MainActivity : AppCompatActivity() {
         iniComponent()
     }
 
+    
     private fun iniComponent() {
-
+        // Only allow alphanumeric characters
         val filter = InputFilter { source, _, _, _, _, _ ->
-            // Only allow alphanumeric characters
             source.filter { it.isLetterOrDigit() }
         }
 
         binding.edtUserName.filters = arrayOf(filter)
+
+
+        binding.btnNextView.setOnClickListener {
+            validateEditTextEmpty(binding.edtUserName)
+        }
+
     }
+    //Validation that the edit text is not empty
+    private fun validateEditTextEmpty(edtUserName: EditText) {
+        if (!edtUserName.text.toString().equals("")) {
+            startActivity(Intent(this, FotoActivity::class.java))
+        } else {
+            Toast.makeText(this, getString(R.string.msg_validate_usu), Toast.LENGTH_SHORT)
+                .show()
+        }
+    }
+
+
 }

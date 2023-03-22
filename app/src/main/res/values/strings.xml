@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">ExamenAndroidIzder</string>
     <string name="user_name">Nombre de usuario</string>
+    <string name="user_name_txt">Ingrese nombre de usuario</string>
     <string name="take_photo">Tomar foto</string>
+    <string name="next_layout">Siguiente</string>
+    <string name="msg_validate_usu"> Debe agregar un nombre de usuario para continuar</string>
 </resources>
