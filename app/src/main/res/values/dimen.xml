@@ -3,4 +3,5 @@
     <dimen name="exm_pading_edit">10dp</dimen>
     <dimen name="exm_20dp">20dp</dimen>
     <dimen name="exm_10dp">10dp</dimen>
+    <dimen name="exm_40dp">40dp</dimen>
 </resources>

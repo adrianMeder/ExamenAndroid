@@ -5,4 +5,10 @@
     <string name="take_photo">Tomar foto</string>
     <string name="next_layout">Siguiente</string>
     <string name="msg_validate_usu"> Debe agregar un nombre de usuario para continuar</string>
+
+    <string name="txt_photo_title">Presione el boton para tomar una selfie o visualizar la existente</string>
+    <string name="txt_menu_photo">Menu foto</string>
+    <string name="txtPhoto">Sacar selfie</string>
+    <string name="txtViewPhoto">Mostrar foto</string>
+    <string name="txt_menu_photo_sub">Selecione si desea tomar una seflie o visualizar su foto</string>
 </resources>

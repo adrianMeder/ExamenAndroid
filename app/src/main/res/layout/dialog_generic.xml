@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/black">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ccTrip"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/exm_20dp"
+        android:layout_marginEnd="@dimen/exm_20dp"
+        android:background="@color/white"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/exm_20dp"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingBottom="@dimen/exm_10dp"
+                android:text="hola mundo"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/txtBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/exm_10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_horizontal"
+                android:paddingStart="@dimen/exm_20dp"
+                android:paddingTop="@dimen/exm_10dp"
+                android:paddingEnd="@dimen/exm_10dp"
+                android:paddingBottom="@dimen/exm_10dp"
+                android:text="Description modify open"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@+id/txtBody" />
+
+            <Button
+                android:id="@+id/btnSelfie"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/exm_10dp"
+                android:layout_marginTop="@dimen/exm_10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="@dimen/exm_10dp"
+                android:background="@drawable/shape_rectangulo_gris_borde_gris"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:text="@string/take_photo"
+                android:textColor="@color/black"
+                android:textSize="10dp"
+                app:backgroundTint="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/selectGalery"
+                app:layout_constraintTop_toBottomOf="@+id/separator"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <Button
+                android:id="@+id/selectGalery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="@dimen/exm_10dp"
+                android:layout_marginEnd="@dimen/exm_10dp"
+                android:layout_marginBottom="@dimen/exm_10dp"
+                android:background="@drawable/shape_rectangulo_gris_borde_gris"
+                android:paddingStart="@dimen/exm_40dp"
+                android:paddingEnd="@dimen/exm_40dp"
+                android:text="@string/txtViewPhoto"
+                android:textColor="@color/black"
+                android:textSize="10dp"
+                app:backgroundTint="@null"
+                app:layout_constraintLeft_toRightOf="@+id/btnSelfie"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
