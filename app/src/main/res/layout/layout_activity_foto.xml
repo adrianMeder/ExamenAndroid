@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.modulePhoto.FotoActivity">
+    tools:context=".ui.modulePhoto.PhotoActivity">
 
     <TextView
         android:id="@+id/txtPhoto"
@@ -40,6 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtPhoto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/btnNextView"
         android:layout_width="match_parent"
@@ -49,6 +50,8 @@
         android:layout_marginEnd="@dimen/exm_20dp"
         android:layout_marginBottom="@dimen/exm_20dp"
         android:text="@string/next_layout"
+        app:backgroundTint="@null"
+        android:background="@drawable/shape_rectangulo_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

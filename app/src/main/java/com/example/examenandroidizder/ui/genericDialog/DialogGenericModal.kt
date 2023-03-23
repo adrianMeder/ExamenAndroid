@@ -9,11 +9,16 @@ import com.example.examenandroidizder.databinding.DialogGenericBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 
-class DialogGenericParm(var title: String, var body: String, var enum: EnumDialog) :
+class DialogGenericModal(
+    var title: String,
+    var body: String,
+    var enum: EnumDialog,
+    var iModal: IDialogModalInterface,
+) :
     BottomSheetDialogFragment() {
 
     private lateinit var binding: DialogGenericBinding
-    lateinit var TipeEnum: EnumDialog
+
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         binding = DialogGenericBinding.inflate(LayoutInflater.from(context))
 
@@ -34,16 +39,20 @@ class DialogGenericParm(var title: String, var body: String, var enum: EnumDialo
 
         binding.ccTrip.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
 
-//        binding.btnAcept.setOnClickListener {
-//            if (EnumDialog.PERMISSIONPHOTO.equals(enum)) {
-//                dismiss()
-//            } else if (EnumDialog.QRMODE.equals(enum)) {
-//                activity?.finish()
-//            } else if (EnumDialog.DEFAULT.equals(enum)) {
-//                activity?.finish()
-//            }
-//        }
+        eventBottom()
 
+
+    }
+
+    private fun eventBottom() {
+        if (EnumDialog.MODALPHOTO.equals(enum)) {
+            binding.btnTakePhoto.setOnClickListener {
+                iModal.dialogTakePhoto()
+            }
+            binding.btnShowPhoto.setOnClickListener {
+                iModal.dialogViewPhoto()
+            }
+        }
     }
 
 

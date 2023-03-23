@@ -11,4 +11,9 @@
     <string name="txtPhoto">Sacar selfie</string>
     <string name="txtViewPhoto">Mostrar foto</string>
     <string name="txt_menu_photo_sub">Selecione si desea tomar una seflie o visualizar su foto</string>
+    <string name="msg_invalid_permission">"Permisos rechazados"</string>
+    <string name="error_getting_image">Error al obtener la foto</string>
+    <string name="save_getting_photo">La foto se guardo correctamente </string>
+    <string name="msg_photo_control">Debe tomar por lo menos una selfie para poder acceder a ver la foto</string>
+
 </resources>

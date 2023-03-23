@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.examenandroidizder">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,7 +20,11 @@
         android:theme="@style/Theme.ExamenAndroidIzder"
         tools:targetApi="31">
         <activity
-            android:name=".ui.modulePhoto.FotoActivity"
+            android:name=".ui.modulePhoto.PhotoActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.moduleShowPhotoActivity.ShowPhotoActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
