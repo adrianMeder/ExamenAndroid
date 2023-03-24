@@ -10,24 +10,36 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.examenandroidizder.ui.modulePhoto.PhotoActivity
 import com.example.examenandroidizder.R
+import com.example.examenandroidizder.data.UserRepositoryImpl
+import com.example.examenandroidizder.database.AppDatabase
+import com.example.examenandroidizder.database.entity.User
 import com.example.examenandroidizder.databinding.ActivityMainBinding
 
-open class MainActivity : AppCompatActivity() {
+open class MainActivity : AppCompatActivity(), IUserActivity.View {
+
     private lateinit var binding: ActivityMainBinding
+    private lateinit var presenter: MainActivityPresenter
+
     companion object {
-        lateinit var usuName:String
+        lateinit var usuName: String
         val emptyByteArray = ByteArray(0)
         var photoObtained = BitmapFactory.decodeByteArray(emptyByteArray, 0, 0)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        presenter = MainActivityPresenter(this,
+            UserRepositoryImpl(AppDatabase.getInstance(this).UserDao()))
+
+        // Llame a getUsers() para obtener y mostrar usuarios
+        presenter.getUsers()
 
         iniComponent()
     }
 
-    
+
     private fun iniComponent() {
         // Only allow alphanumeric characters
         val filter = InputFilter { source, _, _, _, _, _ ->
@@ -42,15 +54,22 @@ open class MainActivity : AppCompatActivity() {
         }
 
     }
+
     //Validation that the edit text is not empty
     private fun validateEditTextEmpty(edtUserName: EditText) {
         if (!edtUserName.text.toString().equals("")) {
-            usuName=edtUserName.text.toString()
+            usuName = edtUserName.text.toString()
             startActivity(Intent(this, PhotoActivity::class.java))
+          var user: User=User(1,usuName)
+         //   presenter.addUser(user)
         } else {
             Toast.makeText(this, getString(R.string.msg_validate_usu), Toast.LENGTH_SHORT)
                 .show()
         }
+    }
+
+    override fun showUsers(users: List<User>) {
+        TODO("Not yet implemented")
     }
 
 

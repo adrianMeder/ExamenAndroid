@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+
 }
 
 android {
@@ -48,4 +50,24 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-database-ktx:20.1.0'
     implementation 'com.google.firebase:firebase-firestore:21.4.0'
+    //retrofit 2
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //Room
+    def room_version = "2.4.0"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:2.4.0"
+
+    // Integración con Coroutines
+    implementation "androidx.room:room-ktx:2.4.0"
+    // Opcionales - agregue los que necesite según su uso
+
+    implementation "androidx.room:room-guava:$room_version"
+    implementation "androidx.room:room-testing:$room_version"
+
 }

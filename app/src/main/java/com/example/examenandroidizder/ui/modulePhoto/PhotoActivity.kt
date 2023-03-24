@@ -25,6 +25,7 @@ class PhotoActivity : AppCompatActivity(),IDialogModalInterface,IPhoto.View {
     private lateinit var bottomSheetDialog:DialogGenericModal
     private lateinit var IDialogModal: IDialogModalInterface
     private lateinit var presenter: PhotoActivityPresenter
+
     companion object {
         const val REQUEST_CODE_CAMERA = 200
     }

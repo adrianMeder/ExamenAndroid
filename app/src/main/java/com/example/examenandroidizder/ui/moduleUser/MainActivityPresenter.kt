@@ -1,4 +1,18 @@
 package com.example.examenandroidizder.ui.moduleUser
 
-class MainActivityPresenter {
+import com.example.examenandroidizder.data.UserRepository
+import com.example.examenandroidizder.database.entity.User
+import com.example.examenandroidizder.ui.moduleService.IServices
+
+class MainActivityPresenter(private val view: IUserActivity.View ,private val userRepository: UserRepository):IUserActivity {
+
+
+    fun getUsers() {
+    //    val users = userRepository.getAllUsers()
+     //   view.showUsers(users)
+    }
+
+    fun addUser(user:User){
+     //   val users = userRepository.addUser(user)
+    }
 }
