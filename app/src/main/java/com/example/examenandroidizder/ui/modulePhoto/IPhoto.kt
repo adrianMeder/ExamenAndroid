@@ -12,6 +12,7 @@ interface IPhoto {
         fun showErrorMessage(message: String)
     }
     interface Presenter {
+        fun permissionStorage()
         fun onButtonClicked(selectPDFFile: ActivityResultLauncher<String>)
         fun onFileSelected(fileUri: Uri)
     }
