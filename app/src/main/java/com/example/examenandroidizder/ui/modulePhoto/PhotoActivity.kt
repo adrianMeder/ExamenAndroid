@@ -20,6 +20,7 @@ import com.example.examenandroidizder.databinding.LayoutActivityFotoBinding
 import com.example.examenandroidizder.ui.genericDialog.DialogGenericModal
 import com.example.examenandroidizder.ui.genericDialog.EnumDialog
 import com.example.examenandroidizder.ui.genericDialog.IDialogModalInterface
+import com.example.examenandroidizder.ui.moduleService.ServicesActivity
 import com.example.examenandroidizder.ui.moduleShowPhotoActivity.ShowPhotoActivity
 import com.example.examenandroidizder.ui.moduleUser.MainActivity
 import com.google.firebase.database.ktx.database
@@ -54,10 +55,12 @@ class PhotoActivity : AppCompatActivity(), IDialogModalInterface, IPhoto.View {
         presenter.permissionStorage()
         binding.progressBar.visibility = View.GONE
         IDialogModal = this
+        //button where open Modal
         binding.btnOpenModal.setOnClickListener {
             mostrarModal()
         }
 
+        //button where save the photo in the storage
         binding.btnSaveStorage.setOnClickListener {
 
             if (MainActivity.photoObtained != null) {
@@ -66,6 +69,10 @@ class PhotoActivity : AppCompatActivity(), IDialogModalInterface, IPhoto.View {
                 Toast.makeText(this, getString(R.string.msg_photo_control_storage), Toast.LENGTH_SHORT)
                     .show()
             }
+        }
+        //button where open view List Services
+        binding.btnNextView.setOnClickListener {
+            startActivity(Intent(this, ServicesActivity::class.java))
         }
     }
 

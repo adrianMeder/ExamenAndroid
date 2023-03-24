@@ -12,4 +12,5 @@
     <color name="background">#f2f2f2</color>
     <color name="colorOrange">#E16A48</color>
     <color name="blue">#5E8EF0</color>
+    <color name="greyLight">#818181</color>
 </resources>

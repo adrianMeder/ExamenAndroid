@@ -19,4 +19,7 @@
     <string name="btn_load_img">Subir a storage</string>
     <string name="msg_photo_succes">La foto se guardo con exito</string>
 
+
+    <string name="btn_view_list">Ver listado</string>
+
 </resources>

@@ -7,11 +7,14 @@
         <entry key="..\:/Users/usuario/AndroidStudioProjects/ExamenAndroidI/app/src/main/res/drawable-v24/shape_border.xml" value="0.1" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/ExamenAndroidI/app/src/main/res/drawable-v24/shape_rectangulo_gris_borde_gris.xml" value="0.123" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/ExamenAndroidI/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.1" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/ExamenAndroidI/app/src/main/res/drawable/shape_border_grey.xml" value="0.1" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/ExamenAndroidI/app/src/main/res/drawable/shape_rectangulo_blue.xml" value="0.1" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/ExamenAndroidI/app/src/main/res/layout/activity_main.xml" value="0.16485507246376813" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/ExamenAndroidI/app/src/main/res/layout/dialog_generic.xml" value="0.25" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/ExamenAndroidI/app/src/main/res/layout/item_disk.xml" value="0.18" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/ExamenAndroidI/app/src/main/res/layout/item_services_show.xml" value="0.1" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/ExamenAndroidI/app/src/main/res/layout/layout_activity_foto.xml" value="0.15" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/ExamenAndroidI/app/src/main/res/layout/layout_list_services.xml" value="0.1" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/ExamenAndroidI/app/src/main/res/layout/layout_show_photo.xml" value="0.16485507246376813" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/ExamenAndroidI/app/src/main/res/layout/zscm_dialog_generic.xml" value="0.16485507246376813" />
       </map>

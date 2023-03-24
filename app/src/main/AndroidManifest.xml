@@ -28,6 +28,10 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ui.moduleService.ServicesActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ui.moduleUser.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">

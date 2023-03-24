@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgCont"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_margin="@dimen/exm_10dp"
+        android:background="@drawable/shape_border"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="@dimen/exm_10dp"
+        android:textColor="@color/greyLight"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imgCont"
+        app:layout_constraintRight_toRightOf="@+id/imgCont"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Semana 1 / 28 dic - 3 ene" />
+    <TextView
+        android:id="@+id/txtAlbumName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/exm_10dp"
+        android:textColor="@color/greyLight"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imgCont"
+        app:layout_constraintRight_toRightOf="@+id/imgCont"
+        app:layout_constraintTop_toBottomOf="@+id/imgPhoto"
+        tools:text="Semana 1 / 28 dic - 3 ene" />
+    <TextView
+        android:id="@+id/txtNameArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/exm_10dp"
+        android:textColor="@color/greyLight"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imgCont"
+        app:layout_constraintRight_toRightOf="@+id/imgCont"
+        app:layout_constraintTop_toBottomOf="@+id/txtAlbumName"
+        tools:text="Semana 1 / 28 dic - 3 ene" />
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/exm_10dp"
+        android:textColor="@color/greyLight"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imgCont"
+        app:layout_constraintRight_toRightOf="@+id/imgCont"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameArtist"
+        tools:text="Semana 1 / 28 dic - 3 ene" />
+    <TextView
+        android:id="@+id/txtDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/exm_10dp"
+        android:textColor="@color/greyLight"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imgCont"
+        app:layout_constraintRight_toRightOf="@+id/imgCont"
+        app:layout_constraintTop_toBottomOf="@+id/txtDate"
+        tools:text="Semana 1 / 28 dic - 3 ene" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
