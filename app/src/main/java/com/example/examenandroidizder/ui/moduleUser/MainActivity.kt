@@ -20,10 +20,10 @@ open class MainActivity : AppCompatActivity(), IUserActivity.View {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var presenter: MainActivityPresenter
-  lateinit var userdao:UserDao
+    lateinit var userdao: UserDao
 
     companion object {
-        lateinit var usuName: String
+        var usuName: String=""
         val emptyByteArray = ByteArray(0)
         var photoObtained = BitmapFactory.decodeByteArray(emptyByteArray, 0, 0)
         var backgroundColor = ""
@@ -39,9 +39,6 @@ open class MainActivity : AppCompatActivity(), IUserActivity.View {
         presenter.obteniedColor()
         val room = Room.databaseBuilder(this, AppDatabase::class.java, "user").build()
 
-        // Llame a getUsers() para obtener y mostrar usuarios
-        presenter.getUsers()
-
         iniComponent(room)
     }
 
@@ -53,7 +50,10 @@ open class MainActivity : AppCompatActivity(), IUserActivity.View {
 
 
     private fun iniComponent(room: AppDatabase) {
-       // showNameUser(room)
+        // showNameUser(room)
+        if (!usuName.equals("")) {
+            binding.txtNameView.setText(getString(R.string.user_name_txt2)+usuName)
+        }
         // Only allow alphanumeric characters
         val filter = InputFilter { source, _, _, _, _, _ ->
             source.filter { it.isLetterOrDigit() }
@@ -63,7 +63,7 @@ open class MainActivity : AppCompatActivity(), IUserActivity.View {
 
 
         binding.btnNextView.setOnClickListener {
-            validateEditTextEmpty(binding.edtUserName,room)
+            validateEditTextEmpty(binding.edtUserName, room)
         }
 
     }
@@ -81,8 +81,7 @@ open class MainActivity : AppCompatActivity(), IUserActivity.View {
         if (!edtUserName.text.toString().equals("")) {
             usuName = edtUserName.text.toString()
             startActivity(Intent(this, PhotoActivity::class.java))
-         //   saveUser(room)
-            //   presenter.addUser(user)
+            //   saveUser(room)
         } else {
             Toast.makeText(this, getString(R.string.msg_validate_usu), Toast.LENGTH_SHORT)
                 .show()

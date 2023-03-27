@@ -14,7 +14,6 @@
         android:layout_marginEnd="@dimen/exm_20dp"
         android:paddingStart="@dimen/exm_pading_edit"
         android:paddingEnd="@dimen/exm_pading_edit"
-        android:text="@string/user_name_txt2"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
