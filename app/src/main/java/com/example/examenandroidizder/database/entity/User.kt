@@ -1,10 +1,11 @@
 package com.example.examenandroidizder.database.entity
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "users")
+@Entity
 data class User(
     @PrimaryKey val id: Int,
-    val name: String,
+    @ColumnInfo(name="name") val name: String,
 )

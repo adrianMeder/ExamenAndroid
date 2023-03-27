@@ -8,15 +8,18 @@ import com.example.examenandroidizder.database.entity.User
 
 @Dao
 interface UserDao {
-    @Query("SELECT * FROM users")
-    fun getAll(): List<User>
+    @Query("SELECT * FROM User")
+     fun getAll(): List<User>
 
-    @Query("SELECT * FROM users WHERE id = :userId")
-    fun getUser(userId: Int): User
+    @Query("SELECT * FROM User WHERE id = :userId")
+     fun getUser(userId: Int): User
+
+    @Query("UPDATE User SET name=:nombre WHERE id=:userId")
+     fun updateUser(userId: Int, nombre: String)
 
     @Insert
-    fun insertAll(vararg users: User)
+     fun insertAll(vararg users: User)
 
     @Delete
-    fun delete(user: User)
+     fun delete(user: User)
 }
